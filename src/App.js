@@ -51,7 +51,11 @@ function App() {
           <i style={{marginLeft:'-56px'}} onClick={addTodo} class="bg-red-500 rounded-full p-4 text-white fa-solid fa-plus"></i>
       </div>
       <div className='flex justify-end w-1/2 px-5'>
-        <i class="fa-solid fa-trash text-3xl text-red-800" title='DELETE ALL' onClick={handleDeleteAll}></i>
+        {
+          todos.length > 0 && (
+            <i class="fa-solid fa-trash text-3xl text-red-800" title='DELETE ALL' onClick={handleDeleteAll}></i>
+          )
+        }
       </div>
       <div className='mt-3 w-1/2'>
         <ul>
